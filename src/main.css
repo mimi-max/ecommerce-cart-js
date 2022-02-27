@@ -1,0 +1,501 @@
+* {
+    box-sizing: inherit;
+}
+
+
+:root {
+    --color-gold: #a27D2F;
+    --color-white: #fff;
+    --color-beige: #fefefe;
+    --colorBlack: rgb(0, 0, 0);
+    --blackOpacity: rgba(0, 0, 0, 0.7);
+    --colorgrey: rgba(255, 255, 255, 0.2);
+
+}
+
+body {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--colorBlack);
+    font-family: 'Noto Serif', serif;
+    font-size: 14px;
+}
+
+.nav-left nav, .nav-right, .nav-left-list, .nav-right-list {
+    padding: 0;
+    margin: 0;
+}
+
+/********************************** Partie Navigation  *************************/
+.topbar {
+    position: fixed;
+    top: 0;
+    padding-left: 96px;
+    padding-right: 96px;
+    background-color: var(--blackOpacity);
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 40px
+}
+
+.navigation, .nav-left nav, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.navigation, .nav-left, .nav-right, .nav-left-list, .nav-right-list {
+    list-style: none;
+}
+
+.navigation .nav-left .nav-left-list>.linkNav {
+    color: var(--color-beige);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navigation .nav-right .nav-right-list>.linkNav {
+    color: var(--color-beige);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navigation .nav-left .nav-left-list>.linkNav:hover,
+.navigation .nav-left .nav-left-list>a:focus {
+    color: var(--color-gold);
+}
+
+.navigation .nav-right .nav-right-list>.linkNav:hover,
+.navigation .nav-right .nav-right-list>a:focus {
+    color: var(--color-gold);
+}
+
+@media screen and (max-width : 750px) {
+    .topbar {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .nav-left,
+    .nav-right {
+        gap: 12px;
+        padding: 0;
+    }
+
+}
+
+/********************************** Partie Presentation produit*************************/
+
+
+
+
+
+.container-title {
+    color: var(--color-gold);
+    white-space: pre-line;
+    font-size: 24px;
+    margin:32px 0;
+}
+
+.container-title>span {
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.959);
+    letter-spacing: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container-product-overwiew-description {
+    color: var(--color-white);
+
+}
+
+.hero {
+    min-height: 100vh;
+    background-image: url("./image/bg-hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    padding-top: 60px;
+    padding-left: 96px;
+    padding-right: 96px;
+}
+
+.hero-paragragh {
+    margin: 24px 0 48px 0;
+    max-width: 400px;
+}
+
+.discover-shop {
+    width: 200px;
+    height: 40px;
+    background-color: var(--colorgrey);
+    display: inline-flex;
+    color: var(--color-white);
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+@media screen and (max-width : 750px) {
+    .discover-shop {
+        width: 100%;
+    }
+
+}
+
+/********************************** Partie  produits*************************/
+.product {
+    min-width: 304px;
+    flex: 0 1 304px
+}
+
+.product-items {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 96px;
+    padding-right: 96px;
+
+}
+
+.product-image {
+    width: 100%;
+}
+
+.product-image-container:hover {
+    box-shadow: 0px 0px 0 1px #000;
+}
+
+.product-image-container {
+    position: relative;
+}
+
+.product-image-container:hover .add-btn {
+    display: block;
+}
+
+.add-btn {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 107px;
+    height: 33px;
+    text-align: center;
+    background-color: var(--color-gold);
+    border: none;
+    color: var(--color-white);
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+}
+
+
+.product-down-description {
+    margin: 32px auto;
+    width: 220px;
+}
+
+.vignoble {
+    color: var(--color-gold);
+}
+
+.separator {
+    border-bottom: 1px solid black;
+    width: 150px;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-name, .span, .item-price {
+    color: #000;
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.item-price {
+    color: var(--color-gold);
+    padding: 10px;
+}
+@media screen and (max-width : 750px) {
+    .add-btn {
+        display: block;
+    }
+
+}
+/********************************** Partie  prix totale*************************/
+.footer {
+    background-color: rgb(10, 10, 10);
+    padding-left: 96px;
+    padding-right: 96px;
+    padding-top: 60px;
+}
+
+.footer-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+ .account, .cart-view, .fas {
+    padding: 8px;
+}
+
+.account span:hover, .cart-view span:hover {
+    border-bottom: 2px solid var(--color-gold);
+
+}
+
+ .account, .cart-view, .social {
+    color: var(--color-gold);
+    text-decoration: none;
+}
+
+ .insta, .facebook {
+    margin: 8px;
+    color: var(--color-white);
+}
+
+.pseudo-search {
+    display: inline-flex;
+    width: 300px;
+    border: 1px solid var(--color-beige);
+    border-radius: 100px;
+    position: relative;
+
+}
+
+.search {
+    width: 100%;
+    padding: 10px;
+    border-radius: 100px;
+    background: none;
+    border: none;
+    color: var(--color-beige);
+    outline: none;
+}
+
+.search-button {
+    border-radius: 100px;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    outline: none;
+    cursor: pointer;
+    color: var(--color-gold);
+    font-size: 24px;
+    background: none;
+    border: none;
+}
+
+.search::placeholder {
+    color: var(--color-white);
+}
+@media screen and (max-width : 750px) {
+    .footer-header {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .pseudo-search {
+        width: 100%;
+        margin-top: 12px;
+    
+    }
+
+}
+/********************************** Partie  prix totale2*************************/
+
+.container-invoice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.monpanier {
+    font-size: 18px;
+    width: 100%;
+    margin: 0 0 20px 0px
+}
+
+.invoices {
+    display: flex;
+    gap: 72px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.monpanierborder {
+    border-bottom: 2.5px solid var(--color-white);
+}
+
+.invoice-table {
+    border-collapse: collapse;
+    background-color: rgba(102, 102, 102, 0.5);
+    flex: 1;
+}
+
+.headertable, .invoice-table-row {
+    border-bottom: 1px solid var(--color-gold);
+    border-top: 1px solid var(--color-gold);
+}
+
+.invoice-table-row>th, .sellerName {
+    color: var(--color-gold);
+}
+
+
+input[type="number"] {
+    width: 40px;
+    height: 20px;
+}
+
+.Payment {
+    background-color: rgba(102, 102, 102, 0.5);
+}
+
+.totaldupanier {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+
+.imgborder {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.btn-trash {
+    background: none;
+    border: none;
+    color: rgb(233, 227, 227);
+    font-size: 20px;
+}
+
+.separator-td>td {
+    border-bottom: 1px solid rgba(102, 102, 102, 0.5);
+}
+
+.basket-total {
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.totaldupanier,
+.totaldupanier-tr,
+.totaldupanier-th,
+.Pretotal {
+    text-align: right;
+    padding-left: 20px;
+    padding: 8px;
+
+}
+
+.totaldupanier-tr,
+.totaldupanier-th,
+.Pretotal {
+    border-bottom: 1px solid rgba(102, 102, 102, 0.5);
+}
+
+.btnpayment {
+    text-align: justify;
+    padding: 10px;
+}
+
+.payer {
+    width: 208px;
+    height: 52px;
+    color: var(--color-white);
+    background-color: var(--color-gold);
+    font-size: 19px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1;
+
+}
+.cart-item-seller{
+    text-align: left;
+}
+.invoice-table td,.invoice-table th{
+ padding: 8px;
+}
+@media screen and (max-width : 750px) {
+    .cart-container:empty{
+        display: none;
+    }
+    .invoices {
+        flex-direction: column;
+        gap:32px
+    }
+    .Payment {
+        width: 100%;
+    }
+    .payer {
+        width: 100%;
+    }
+    .invoice-table-image-cell{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:950px) {
+    .invoices {
+        flex-direction: column;
+    }
+
+    .hero {
+        padding-top: 50px;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-bottom: 20px;
+    }
+
+    .invoice-table-title:nth-child(1n+2) {
+        display: none;
+    }
+
+    .footer {
+        padding-top: 32px;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-bottom: 20px;
+    }
+
+    .product-items {
+        justify-content: center;
+    }
+
+}

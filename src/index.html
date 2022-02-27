@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="topbar">
+            <nav class="navigation">
+                <ul class="nav-left">
+                    <li class="nav-left-list"><a class="linkNav" href="#">Home</a></li>
+                    <li class="nav-left-list"><a class="linkNav" href="#wine">Wines</a></li>
+                </ul>
+                <ul class="nav-right">
+                    <li class="nav-right-list"><a class="linkNav" href="#">Account</a></li>
+                    <li class="nav-right-list"><a class="linkNav" href="#cart">Cart </a></li>
+                </ul>
+
+            </nav>
+        </header>
+        <!--********************************** Partie Navigation  *************************-->
+
+        <main class="container-product-overwiew-description">
+            <!--/********************************** Partie Presentation produit*************************/-->
+            <section class="hero">
+                <div>
+                    <h1 class="container-title"><span>Delgado</span> <br />Family Vignards</h1>
+                </div>
+                <h2>CHARDONNAY CARNEROS</h2>
+                <p class="hero-paragragh">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium ut fugit illo necessitatibus
+                    iure
+                    ab quae,
+                    placeat reiciendis vel quaerat at in fuga tempora nisi quod laborum laboriosam consequuntur eius?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium ut fugit illo necessitatibus
+                    iure
+                    ab quae,
+                    placeat reiciendis vel quaerat at in fuga tempora nisi quod laborum laboriosam consequuntur
+                    eiusLorem
+                    ipsum,
+                    dolor sit amet consectetur adipisicing elit. Accusantium ut fugit illo necessitatibus iure
+                    ab quae,?
+                </p>
+                <a class="discover-shop" href="#">Explore our shop</a>
+            </section>
+
+            <!--/********************************** Partie  produits*************************/-->
+            <!--Le début des produits-->
+            <section class="product-items" id="wine">
+            </section>
+            <!--Fin des prduits-->
+            <footer class="footer" id="cart">
+                <!--/********************************** Partie  prix totale*************************/-->
+                <div class="footer-header">
+                    <nav class="footer-nav">
+                        <a href="#" class="insta"> <i class="fab fa-instagram" class="color"></i></a>
+                        <a href="#" class="facebook"> <i class="fab fa-facebook" class="color"></i></a>
+                        <a href="#" class="account"> <i class="fas fa-user" class="social"></i> <span>My
+                                account </span></a>
+                        <a href="#" class="cart-view"> <i class="fas fa-shopping-cart" class="social"></i><span>My
+                                cart</span></a>
+                    </nav>
+                    <div class="pseudo-search">
+                        <input class="search" type="text" placeholder="Search...">
+                        <button class="search-button" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <h3 class="container-title"><span>Delgado</span> <br />Family Vignards</h3>
+                <div class="container-invoice">
+                    <h2 class="monpanier"> <span class="monpanierborder">MY C</span>ART</h2>
+
+                    <div class="invoices">
+
+                        <div class="cart-container">
+                            <!--Partie table-->
+
+                        </div>
+
+
+                        <div class="Payment">
+                            <table class="totaldupanier">
+                                <tr>
+                                    <th class="basket-total">Basket total</th>
+                                </tr>
+                                <tr class="totaldupanier-tr">
+                                    <th class="totaldupanier-th">Total</th>
+                                    <td class="Pretotal totaleInvoice">00.00</td>
+                                </tr>
+                                <td class="btnpayment" colspan="2">
+                                        <button class="payer">
+                                            <span>Checkout</span>
+                                        </button>
+                                </td>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
