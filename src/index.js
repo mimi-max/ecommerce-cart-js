@@ -1,5 +1,5 @@
 import { fetchProducts } from './api/fetchProducts.js'
-import {insertProducts} from './helpers/insertProducts.js'
+import { insertProducts } from './helpers/insertProducts.js'
 /** je crée une liste de produit avec leur total:
  * ex:{
  *  product1: 30,
@@ -9,36 +9,41 @@ import {insertProducts} from './helpers/insertProducts.js'
 let itemsTotal = {} // je le met dans un objet pour pouvoir accéder aux clées 
 function cartInvoice(productId, price, quantity) {
     itemsTotal[productId] = price * quantity;
+
 }
 function computeTotal() {
-    return Object.values(itemsTotal).reduce((accumulatueur, valeurActuelle) => {
-        return accumulatueur + valeurActuelle
+    return Object.values(itemsTotal).reduce((accumulateur, valeurActuelle) => {
+        return accumulateur + valeurActuelle
     }, 0);
 }
 
 fetchProducts()
-    .then((data)=>{
+    .then((data) => {
         insertProducts(data.products)
+        //console.log(data)
         return data
     })
-    
+
     .then((data) => {
         const buttonListes = document.querySelectorAll(".add-btn");
         buttonListes.forEach((buttonListe) => {
             buttonListe.addEventListener("click", (e) => {
+                console.log(e.target)
 
                 const foundItem = data.products.find((item) => {
                     return item.id === e.target.id
                 })
                 const carts = document.querySelector('.cart-container');
-                const cartItem = document.querySelector(`[data-cart-id="${e.target.id}"]`);
-                
+                const cartItem = document.querySelector(`[data-cart-id="${foundItem.id}"]`);
+
 
                 if (cartItem) {
                     const input = cartItem.querySelector('input[type=number]');
                     input.value++;
                     cartInvoice(foundItem.id, foundItem.prix, input.value);
+                    console.log(itemsTotal)
                     cartItem.querySelector(".totale").innerHTML = itemsTotal[foundItem.id].toFixed(2);
+
                     //Part ALL total
                     const totaux = computeTotal();
                     const totaleInvoice = document.querySelector(".totaleInvoice");
@@ -47,8 +52,7 @@ fetchProducts()
                 else {
                     const table = document.createElement("table");
                     table.className = 'invoice-table';
-                    table.setAttribute('data-cart-id', e.target.id);
-                    console.log(e.target.id)
+                    table.setAttribute('data-cart-id', foundItem.id);
                     table.setAttribute('data-item-price', foundItem.prix);
                     table.innerHTML += `
                         <thead class="headertable">

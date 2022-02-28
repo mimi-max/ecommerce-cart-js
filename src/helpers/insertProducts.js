@@ -1,5 +1,5 @@
 export function insertProducts(products) {
-    console.log(products)
+    //console.log(products)
     const productContainerElement = document.querySelector(".product-items");
     products.forEach((product) => {
         productContainerElement.innerHTML += `
